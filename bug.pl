@@ -12,12 +12,19 @@ my $vars = {};
 $vars->{'now_dt'} = sub { DateTime->now( time_zone => 'local' ); };
 $vars->{'now_posix'} = sub { POSIX::strftime('%F %T %z',localtime(time)); };
 
-$tt->process(\*DATA, $vars);
+my $posix_template = <<'EOM';
+Starting POSIX test...
+Current timestamp: [% now_posix %]
+Finished POSIX test.
+EOM
+
+my $datetime_template = <<'EOM';
+Starting DateTime test...
+Current timestamp: [% now_dt %]
+Finished DateTime test.
+EOM
+
+$tt->process(\$posix_template, $vars);
+$tt->process(\$datetime_template, $vars);
 
 exit;
-
-__END__
-Starting...
-POSIX current timestamp: [% now_posix %]
-DateTime current timestamp: [% now_dt %]
-Finished.
