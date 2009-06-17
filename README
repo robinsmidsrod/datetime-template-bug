@@ -13,6 +13,8 @@ trappable way, it just exits.
 
 Confirmed working on:
 
+From robin@smidsrod.no:
+
 Description:    Ubuntu 8.10
 Linux server 2.6.27-14-server #1 SMP Wed Apr 15 19:44:38 UTC 2009 i686 GNU/Linux
 This is perl, v5.10.0 built for i486-linux-gnu-thread-multi
@@ -29,7 +31,27 @@ DateTime version: 0.50
 Template version: 2.20
 Template stash used: Template::Stash::XS
 
+From ash in #tt@irc.perl.org:
+
+Description:	Ubuntu 9.04
+Linux cambridge 2.6.28-11-generic #42-Ubuntu SMP Fri Apr 17 01:57:59 UTC 2009 i686 GNU/Linux
+This is perl, v5.8.8 built for i686-linux
+POSIX version: 1.09
+DateTime version: 0.4302
+Template version: 2.20
+Template stash used: Template::Stash::XS
+
+Description:	CentOS release 5.2 (Final)
+Linux foo 2.6.18-92.1.6.el5xen #1 SMP Wed Jun 25 14:13:10 EDT 2008 x86_64 x86_64 x86_64 GNU/Linux
+This is perl, v5.8.8 built for x86_64-linux-thread-multi
+POSIX version: 1.09
+DateTime version: 0.4304
+Template version: 2.19
+Template stash used: Template::Stash::XS
+
 Confirmed broken on:
+
+From robin@smidsrod.no:
 
 Description:    Ubuntu 8.04.2
 Linux pf 2.6.24-24-server #1 SMP Wed Apr 15 15:41:09 UTC 2009 x86_64 GNU/Linux
