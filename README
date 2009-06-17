@@ -1,11 +1,12 @@
 There seems to be a problem with DateTime being used by Template Toolkit.
 
 I'm not sure if the bug is in Template or in DateTime, but so far I've been
-able to narrow it down to the fact that the system that breaks is a 64-bit
-platform.
+able to narrow it down to the fact that the system that breaks has the
+following characteristics:
 
-System perl is used, but both CPAN modules are installed to a non-root user
-using local::lib.
+ * Architecture is 64-bit
+ * The XS stash is used
+ * Distribution is Debian or Ubuntu (works on CentOS)
 
 The problem is that when I try to access the DateTime variable in the
 template, the process exits without any error message. It doesn't die in a
@@ -30,6 +31,14 @@ POSIX version: 1.09
 DateTime version: 0.50
 Template version: 2.20
 Template stash used: Template::Stash::XS
+
+Description:    Ubuntu 8.04.2
+Linux pf 2.6.24-24-server #1 SMP Wed Apr 15 15:41:09 UTC 2009 x86_64 GNU/Linux
+This is perl, v5.8.8 built for x86_64-linux-gnu-thread-multi
+POSIX version: 1.09
+DateTime version: 0.50
+Template version: 2.20
+Template stash used: Template::Stash
 
 From ash in #tt@irc.perl.org:
 
