@@ -7,6 +7,8 @@ use POSIX ();
 use DateTime ();
 use Template ();
 
+print_version_info();
+
 my $tt = Template->new();
 my $vars = {};
 $vars->{'now_dt'} = sub { DateTime->now( time_zone => 'local' ); };
@@ -31,3 +33,24 @@ $tt->process(\$datetime_template, $vars);
 print "If you got here, you're in the clear.\n";
 
 exit;
+
+sub print_version_info {
+    print "Version information:\n";
+    system("lsb_release -d");
+    system("uname -a");
+    system("perl -v | grep This");
+    print "POSIX version: " . $POSIX::VERSION . "\n";
+    print "DateTime version: " . $DateTime::VERSION . "\n";
+    print "Template version: " . $Template::VERSION . "\n";
+    print "-" x 30, "\n";
+}
+
+__END__
+COnfirmed working on:
+
+Description:    Ubuntu 8.10
+Linux server 2.6.27-14-server #1 SMP Wed Apr 15 19:44:38 UTC 2009 i686 GNU/Linux
+This is perl, v5.10.0 built for i486-linux-gnu-thread-multi
+POSIX version: 1.13
+DateTime version: 0.50
+Template version: 2.20
