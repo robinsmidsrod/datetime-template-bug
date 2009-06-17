@@ -42,6 +42,13 @@ DateTime version: 0.50
 Template version: 2.20
 Template stash used: Template::Stash
 
+OS: Windows Vista Business x64 w/ strawberry-perl 5.10.0.5
+This is perl, v5.10.0 built for MSWin32-x86-multi-thread
+POSIX version: 1.13
+DateTime version: 0.50
+Template version: 2.20
+Template stash used: Template::Stash::XS
+
 From ash in #tt@irc.perl.org:
 
 Description:	Ubuntu 9.04
