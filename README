@@ -12,6 +12,8 @@ The problem is that when I try to access the DateTime variable in the
 template, the process exits without any error message. It doesn't die in a
 trappable way, it just exits.
 
+------------------------------------------------------------------------------
+
 Confirmed working on:
 
 From robin@smidsrod.no:
@@ -77,6 +79,8 @@ DateTime version: 0.50
 Template version: 2.20
 Template stash used: Template::Stash
 
+------------------------------------------------------------------------------
+
 Confirmed broken on:
 
 From robin@smidsrod.no:
@@ -98,3 +102,84 @@ POSIX version: 1.13
 DateTime version: 0.50
 Template version: 2.20
 Template stash used: Template::Stash::XS
+
+------------------------------------------------------------------------------
+
+Program run with Template->new({ DEBUG => 'all });
+
+Version information:
+Description:	Ubuntu 8.04.2
+Linux pf 2.6.24-24-server #1 SMP Wed Apr 15 15:41:09 UTC 2009 x86_64 GNU/Linux
+This is perl, v5.8.8 built for x86_64-linux-gnu-thread-multi
+[Template::Provider] creating cache of unlimited slots for [ . ]
+[Template::Service] process(SCALAR(0xc55ca0), HASH(0x604f10))
+[Template::Context] template(SCALAR(0xc55ca0))
+[Template::Context] asking providers for [SCALAR(0xc55ca0)] []
+[Template::Provider] _load(SCALAR(0xc55ca0), <no alias>)
+[Template::Provider] _compile(HASH(0xd71ef0), <no compfile>)
+[Template::Parser] compiled main template document block:
+sub {
+    my $context = shift || die "template sub called without context\n";
+    my $stash   = $context->stash;
+    my $output  = '';
+    my $_tt_error;
+    
+    eval { BLOCK: {
+$output .=  "Starting POSIX test...\nCurrent timestamp: ";
+#line 2 "input text"
+$output .=  $context->debugging('msg', { 'line' => '2', 'text' => 'now_posix', 'file' => 'input text' }); ## DEBUG ##
+#line 2 "input text"
+$output .=  $stash->get('now_posix');
+$output .=  "\nFinished POSIX test.\n";
+    } };
+    if ($@) {
+        $_tt_error = $context->catch($@, \$output);
+        die $_tt_error unless $_tt_error->type eq 'return';
+    }
+
+    return $output;
+}
+[Template::Service] PROCESS: Template::Document=HASH(0xeeeb50)
+[Template::Context] process([ Template::Document=HASH(0xeeeb50) ], <no params>, <unlocalized>)
+[Template::Context] template(Template::Document=HASH(0xeeeb50))
+[Template::Service] process(SCALAR(0xc55cd0), HASH(0x604f10))
+[Template::Context] template(SCALAR(0xc55cd0))
+[Template::Context] asking providers for [SCALAR(0xc55cd0)] []
+[Template::Provider] _load(SCALAR(0xc55cd0), <no alias>)
+[Template::Provider] _compile(HASH(0xd71fd0), <no compfile>)
+[Template::Parser] compiled main template document block:
+sub {
+    my $context = shift || die "template sub called without context\n";
+    my $stash   = $context->stash;
+    my $output  = '';
+    my $_tt_error;
+    
+    eval { BLOCK: {
+$output .=  "Starting DateTime test...\nCurrent timestamp: ";
+#line 2 "input text"
+$output .=  $context->debugging('msg', { 'line' => '2', 'text' => 'now_dt', 'file' => 'input text' }); ## DEBUG ##
+#line 2 "input text"
+$output .=  $stash->get('now_dt');
+$output .=  "\nFinished DateTime test.\n";
+    } };
+    if ($@) {
+        $_tt_error = $context->catch($@, \$output);
+        die $_tt_error unless $_tt_error->type eq 'return';
+    }
+
+    return $output;
+}
+[Template::Service] PROCESS: Template::Document=HASH(0xeeead0)
+[Template::Context] process([ Template::Document=HASH(0xeeead0) ], <no params>, <unlocalized>)
+[Template::Context] template(Template::Document=HASH(0xeeead0))
+POSIX version: 1.09
+DateTime version: 0.50
+Template version: 2.20
+Template stash used: Template::Stash::XS
+------------------------------
+Starting POSIX test...
+Current timestamp: 
+## input text line 2 : [% now_posix %] ##
+2009-06-17T13:06:53
+Finished POSIX test.
+The bug is present if you don't see any output after this line.
