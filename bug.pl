@@ -42,5 +42,6 @@ sub print_version_info {
     print "POSIX version: " . $POSIX::VERSION . "\n";
     print "DateTime version: " . $DateTime::VERSION . "\n";
     print "Template version: " . $Template::VERSION . "\n";
+    print "Template stash used: " . $Template::Config::STASH . "\n";
     print "-" x 30, "\n";
 }
