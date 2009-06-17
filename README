@@ -49,6 +49,25 @@ DateTime version: 0.4304
 Template version: 2.19
 Template stash used: Template::Stash::XS
 
+From Dave Howorth <dhoworth@mrc-lmb.cam.ac.uk>:
+
+Description:    SuSE Linux 9.2 (x86-64)
+Linux suse3 2.6.8-24.14-smp #1 SMP Tue Mar 29 09:27:43 UTC 2005 x86_64 x86_64 x86_64 GNU/Linux
+This is perl, v5.8.5 built for x86_64-linux-thread-multi
+POSIX version: 1.08
+DateTime version: 0.29
+Template version: 2.14
+
+From Frank Wiegand <frank@planet-interview.de>:
+
+Description:    Debian GNU/Linux testing (squeeze)
+Linux hal2 2.6.26-2-amd64 #1 SMP Fri Mar 27 04:02:59 UTC 2009 x86_64 GNU/Linux
+This is perl, v5.10.0 built for x86_64-linux-gnu-thread-multi
+POSIX version: 1.13
+DateTime version: 0.50
+Template version: 2.20
+Template stash used: Template::Stash
+
 Confirmed broken on:
 
 From robin@smidsrod.no:
@@ -57,6 +76,16 @@ Description:    Ubuntu 8.04.2
 Linux pf 2.6.24-24-server #1 SMP Wed Apr 15 15:41:09 UTC 2009 x86_64 GNU/Linux
 This is perl, v5.8.8 built for x86_64-linux-gnu-thread-multi
 POSIX version: 1.09
+DateTime version: 0.50
+Template version: 2.20
+Template stash used: Template::Stash::XS
+
+From Frank Wiegand <frank@planet-interview.de>:
+
+Description:    Debian GNU/Linux testing (squeeze)
+Linux hal2 2.6.26-2-amd64 #1 SMP Fri Mar 27 04:02:59 UTC 2009 x86_64 GNU/Linux
+This is perl, v5.10.0 built for x86_64-linux-gnu-thread-multi
+POSIX version: 1.13
 DateTime version: 0.50
 Template version: 2.20
 Template stash used: Template::Stash::XS
