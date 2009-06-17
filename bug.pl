@@ -25,6 +25,9 @@ Finished DateTime test.
 EOM
 
 $tt->process(\$posix_template, $vars);
+print "The bug is present if you don't see any output after this line.\n";
+
 $tt->process(\$datetime_template, $vars);
+print "If you got here, you're in the clear.\n";
 
 exit;
