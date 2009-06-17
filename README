@@ -7,6 +7,10 @@ platform.
 System perl is used, but both CPAN modules are installed to a non-root user
 using local::lib.
 
+The problem is that when I try to access the DateTime variable in the
+template, the process exits without any error message. It doesn't die in a
+trappable way, it just exits.
+
 Confirmed working on:
 
 Description:    Ubuntu 8.10
