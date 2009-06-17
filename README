@@ -19,6 +19,7 @@ This is perl, v5.10.0 built for i486-linux-gnu-thread-multi
 POSIX version: 1.13
 DateTime version: 0.50
 Template version: 2.20
+Template stash used: Template::Stash::XS
 
 Description:    Ubuntu 8.04.2
 Linux gm 2.6.24-24-generic #1 SMP Wed Apr 15 15:54:25 UTC 2009 i686 GNU/Linux
@@ -26,6 +27,7 @@ This is perl, v5.8.8 built for i486-linux-gnu-thread-multi
 POSIX version: 1.09
 DateTime version: 0.50
 Template version: 2.20
+Template stash used: Template::Stash::XS
 
 Confirmed broken on:
 
@@ -35,3 +37,4 @@ This is perl, v5.8.8 built for x86_64-linux-gnu-thread-multi
 POSIX version: 1.09
 DateTime version: 0.50
 Template version: 2.20
+Template stash used: Template::Stash::XS
