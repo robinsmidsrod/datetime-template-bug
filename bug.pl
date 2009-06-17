@@ -10,7 +10,7 @@ use Template ();
 my $tt = Template->new();
 my $vars = {};
 $vars->{'now_dt'} = sub { DateTime->now( time_zone => 'local' ); };
-$vars->{'now_posix'} = sub { POSIX::strftime('%F %T %z',localtime(time)); };
+$vars->{'now_posix'} = sub { POSIX::strftime('%FT%T',localtime(time)); };
 
 my $posix_template = <<'EOM';
 Starting POSIX test...
