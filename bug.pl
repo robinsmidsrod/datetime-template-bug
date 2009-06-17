@@ -9,7 +9,7 @@ use Template ();
 
 print_version_info();
 
-my $tt = Template->new();
+my $tt = Template->new({ DEBUG => 'all' });
 my $vars = {};
 $vars->{'now_dt'} = sub { DateTime->now( time_zone => 'local' ); };
 $vars->{'now_posix'} = sub { POSIX::strftime('%FT%T',localtime(time)); };
