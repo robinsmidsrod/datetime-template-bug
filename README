@@ -79,6 +79,16 @@ DateTime version: 0.50
 Template version: 2.20
 Template stash used: Template::Stash
 
+From jhannah in #perl-help@irc.perl.org:
+
+OS: SUSE Linux Enterprise Server 10 (i586)
+Linux dev 2.6.16.54-0.2.3-default #1 Thu Nov 22 18:32:07 UTC 2007 i686 i686 i386 GNU/Linux
+This is perl, v5.8.8 built for i586-linux-thread-multi
+POSIX version: 1.09
+DateTime version: 0.42
+Template version: 2.20
+Template stash used: Template::Stash::XS
+
 ------------------------------------------------------------------------------
 
 Confirmed broken on:
@@ -101,6 +111,16 @@ This is perl, v5.10.0 built for x86_64-linux-gnu-thread-multi
 POSIX version: 1.13
 DateTime version: 0.50
 Template version: 2.20
+Template stash used: Template::Stash::XS
+
+From jhannah in #perl-help@irc.perl.org:
+
+OS: MacOS X 10.4.11
+Darwin Hannah-Mac-Mini-2.local 8.11.1 Darwin Kernel Version 8.11.1: Wed Oct 10 18:23:28 PDT 2007; root:xnu-792.25.20~1/RELEASE_I386 i386 i386
+This is perl, v5.8.6 built for darwin-thread-multi-2level
+POSIX version: 1.08
+DateTime version: 0.50
+Template version: 2.14
 Template stash used: Template::Stash::XS
 
 ------------------------------------------------------------------------------
