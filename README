@@ -1,0 +1,33 @@
+There seems to be a problem with DateTime being used by Template Toolkit.
+
+I'm not sure if the bug is in Template or in DateTime, but so far I've been
+able to narrow it down to the fact that the system that breaks is a 64-bit
+platform.
+
+System perl is used, but both CPAN modules are installed to a non-root user
+using local::lib.
+
+Confirmed working on:
+
+Description:    Ubuntu 8.10
+Linux server 2.6.27-14-server #1 SMP Wed Apr 15 19:44:38 UTC 2009 i686 GNU/Linux
+This is perl, v5.10.0 built for i486-linux-gnu-thread-multi
+POSIX version: 1.13
+DateTime version: 0.50
+Template version: 2.20
+
+Description:    Ubuntu 8.04.2
+Linux gm 2.6.24-24-generic #1 SMP Wed Apr 15 15:54:25 UTC 2009 i686 GNU/Linux
+This is perl, v5.8.8 built for i486-linux-gnu-thread-multi
+POSIX version: 1.09
+DateTime version: 0.50
+Template version: 2.20
+
+Confirmed broken on:
+
+Description:    Ubuntu 8.04.2
+Linux pf 2.6.24-24-server #1 SMP Wed Apr 15 15:41:09 UTC 2009 x86_64 GNU/Linux
+This is perl, v5.8.8 built for x86_64-linux-gnu-thread-multi
+POSIX version: 1.09
+DateTime version: 0.50
+Template version: 2.20

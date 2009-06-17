@@ -44,13 +44,3 @@ sub print_version_info {
     print "Template version: " . $Template::VERSION . "\n";
     print "-" x 30, "\n";
 }
-
-__END__
-COnfirmed working on:
-
-Description:    Ubuntu 8.10
-Linux server 2.6.27-14-server #1 SMP Wed Apr 15 19:44:38 UTC 2009 i686 GNU/Linux
-This is perl, v5.10.0 built for i486-linux-gnu-thread-multi
-POSIX version: 1.13
-DateTime version: 0.50
-Template version: 2.20
