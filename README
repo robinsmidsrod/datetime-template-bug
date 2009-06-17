@@ -6,7 +6,7 @@ following characteristics:
 
  * Architecture is 64-bit
  * The XS stash is used
- * Distribution is Debian or Ubuntu (works on CentOS)
+ * Distribution is Debian, Ubuntu, SuSE or MacOSX 10.4.11 (works on CentOS)
 
 The problem is that when I try to access the DateTime variable in the
 template, the process exits without any error message. It doesn't die in a
@@ -121,6 +121,14 @@ This is perl, v5.8.6 built for darwin-thread-multi-2level
 POSIX version: 1.08
 DateTime version: 0.50
 Template version: 2.14
+Template stash used: Template::Stash::XS
+
+OS: SUSE Linux Enterprise Server 10.2 (x86_64)
+Linux omares-omnihubdr1 2.6.16.60-0.21-smp #1 SMP Tue May 6 12:41:02 UTC 2008 x86_64 x86_64 x86_64 GNU/Linux
+This is perl, v5.8.8 built for x86_64-linux-thread-multi
+POSIX version: 1.09
+DateTime version: 0.50
+Template version: 2.20
 Template stash used: Template::Stash::XS
 
 ------------------------------------------------------------------------------
