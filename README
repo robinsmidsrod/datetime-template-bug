@@ -12,6 +12,11 @@ The problem is that when I try to access the DateTime variable in the
 template, the process exits without any error message. It doesn't die in a
 trappable way, it just exits.
 
+References / more information:
+https://rt.cpan.org/Ticket/Display.html?id=47032
+https://rt.cpan.org/Ticket/Display.html?id=48020
+https://rt.cpan.org/Ticket/Display.html?id=47929
+http://github.com/abw/TT-XS-Stash-DateTime/tree/master
 ------------------------------------------------------------------------------
 
 Confirmed working on:
