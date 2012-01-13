@@ -1,3 +1,18 @@
+UPDATE 2012-01-13
+=================
+
+Andy Wardley seems to have solved the issue in the following commit:
+
+https://github.com/abw/Template2/commit/cb1d793924ac105c188c2a573b7233621a6c5e24
+
+Now I guess it's just a matter of waiting for a new release. 2.22_1 seems to
+be golden.
+
+-- robinsmidsrod
+
+OLD INFORMATION BELOW
+=====================
+
 There seems to be a problem with DateTime being used by Template Toolkit.
 
 I'm not sure if the bug is in Template or in DateTime, but so far I've been
@@ -22,6 +37,24 @@ http://github.com/abw/TT-XS-Stash-DateTime/tree/master
 Confirmed working on:
 
 From robin@smidsrod.no:
+
+Description:    Ubuntu 10.04.3 LTS
+Linux server 2.6.32-36-generic-pae #79-Ubuntu SMP Tue Nov 8 23:25:26 UTC
+2011 i686 GNU/Linux
+This is perl 5, version 12, subversion 2 (v5.12.2) built for i686-linux
+POSIX version: 1.19
+DateTime version: 0.66
+Template version: 2.22_1 (commit bb1080b)
+Template stash used: Template::Stash::XS
+
+Description:    Ubuntu 10.04.3 LTS
+Linux server 2.6.32-36-generic-pae #79-Ubuntu SMP Tue Nov 8 23:25:26 UTC
+2011 i686 GNU/Linux
+This is perl 5, version 14, subversion 0 (v5.14.0) built for i686-linux
+POSIX version: 1.24
+DateTime version: 0.72
+Template version: 2.22_1 (commit bb1080b)
+Template stash used: Template::Stash::XS
 
 Description:    Ubuntu 8.10
 Linux server 2.6.27-14-server #1 SMP Wed Apr 15 19:44:38 UTC 2009 i686 GNU/Linux
